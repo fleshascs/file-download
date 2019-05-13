@@ -1,2 +1,8 @@
 <?php
-  echo 'test';
+  $data = file_get_contents("test.jpg");
+
+  $array = array(); 
+  foreach(str_split($data) as $char){ 
+      array_push($array, ord($char)); 
+  }
+  var_dump(implode(' ', $array));
