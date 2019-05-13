@@ -1,5 +1,14 @@
 <?php
-  $data = file_get_contents("Example.jpg");
+  $filePath = '';
+  switch ($_GET['type']) {
+    case 'pdf':
+       $filePath = 'sample.pdf';
+       break;
+    default:
+       $filePath = 'Example.jpg';
+  }
+
+  $data = file_get_contents($filePath);
 
   $array = array(); 
   foreach(str_split($data) as $char){ 
