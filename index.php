@@ -4,6 +4,9 @@
     case 'pdf':
        $filePath = 'sample.pdf';
        break;
+    case 'zip':
+       $filePath = '10MB.zip';
+       break;
     default:
        $filePath = 'Example.jpg';
   }
