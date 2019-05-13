@@ -1,5 +1,5 @@
 <?php
-  $data = file_get_contents("test.jpg");
+  $data = file_get_contents("Example.jpg");
 
   $array = array(); 
   foreach(str_split($data) as $char){ 
