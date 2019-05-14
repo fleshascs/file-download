@@ -12,6 +12,7 @@
   }
 
   header('Content-Disposition: attachment; filename="'.$file.'"');
+  header("Content-Length: ".filesize($file));
   readfile($file);
 /*
   $data = file_get_contents($file);
