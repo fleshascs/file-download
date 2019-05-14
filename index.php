@@ -12,9 +12,12 @@
   }
 
   header('Content-Disposition: attachment; filename="'.$file.'"');
+  readfile($file);
+/*
   $data = file_get_contents($file);
   $array = array(); 
   foreach(str_split($data) as $char){ 
       array_push($array, ord($char)); 
   }
   var_dump(implode(' ', $array));
+ */
