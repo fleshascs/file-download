@@ -1,18 +1,18 @@
 <?php
-  $filePath = '';
+ $file = '';
   switch ($_GET['type']) {
     case 'pdf':
-       $filePath = 'sample.pdf';
+       $file = 'sample.pdf';
        break;
     case 'zip':
-       $filePath = '10MB.zip';
+       $file = '10MB.zip';
        break;
     default:
-       $filePath = 'Example.jpg';
+       $file = 'Example.jpg';
   }
 
-  $data = file_get_contents($filePath);
-
+  header('Content-Disposition: attachment; filename="'.$file.'"');
+  $data = file_get_contents($file);
   $array = array(); 
   foreach(str_split($data) as $char){ 
       array_push($array, ord($char)); 
